@@ -11,7 +11,7 @@ function RecoveryPassword() {
     const[email, setEmail] = useState("");
 
     const handleRecovery = async (e) => {
-        if(email === "daniel@gmail.com"){
+        if(email === "admin@gmail.com"){
             alert("Codigo enviado")
             navigate("/password-code")
         }else{

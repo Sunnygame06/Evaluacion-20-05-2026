@@ -8,15 +8,17 @@ import Card from "../components/Card"
 function Register(){
     const navigate = useNavigate()
 
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState();
 
     const handleRegister = async (e) => {
         e.preventDefault()
 
         const user = {
-            title,
-            body
+            name,
+            email,
+            password,
         }
         console.log(user)
 
@@ -32,14 +34,20 @@ function Register(){
 
                     <Input
                         type="text"
-                        placeholder="Titulo"
-                        onChange={(e) => setTitle(e.target.value)}
+                        placeholder="Nombre"
+                        onChange={(e) => setName(e.target.value)}
                     />
 
                     <Input
                         type="text"
-                        placeholder="Body"
-                        onChange={(e) => setBody(e.target.value)}
+                        placeholder="Correo"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+
+                    <Input
+                        type="password"
+                        placeholder="Contraseña"
+                        onChange={(e) => setPassword(e.target.value)}
                     />
 
                     <Button
