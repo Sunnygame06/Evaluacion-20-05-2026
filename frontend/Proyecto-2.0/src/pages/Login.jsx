@@ -21,7 +21,7 @@ function Login(){
 
         if(email === fakeUser.email && password === fakeUser.password){
             alert("Inicio de sesion exitoso")
-            navigate("/dashboard")
+            navigate("/home")
         }else{
             alert("Correo o contraseña incorrecta")
         }

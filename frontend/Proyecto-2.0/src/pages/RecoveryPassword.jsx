@@ -1,3 +1,4 @@
+import { useState } from "react"
 import {Link, useNavigate,} from "react-router-dom"
 
 import Input from "../components/Input"
@@ -10,7 +11,7 @@ function RecoveryPassword() {
     const[email, setEmail] = useState("");
 
     const handleRecovery = async (e) => {
-        if(email === "admin@gmail.com"){
+        if(email === "daniel@gmail.com"){
             alert("Codigo enviado")
             navigate("/password-code")
         }else{
